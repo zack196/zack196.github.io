@@ -1,0 +1,303 @@
+.portfolio {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 88px 48px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 88px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 88px;
+  height: calc(100dvh - 176px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  display: inline-block;
+  color: var(--heading);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.15;
+}
+
+.role {
+  margin: 16px 0;
+  color: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.introduction {
+  max-width: 300px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.location {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  margin-top: 56px;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.nav-line {
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+  transition: width 180ms ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: var(--heading);
+}
+
+.navigation a:hover .nav-line,
+.navigation a.active .nav-line {
+  width: 60px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 36px;
+  font-size: 0.85rem;
+}
+
+.social-links a:hover,
+.text-link:hover,
+.contact-email:hover {
+  color: var(--accent);
+}
+
+.content {
+  min-width: 0;
+}
+
+.content section {
+  margin-bottom: 80px;
+}
+
+.section-heading {
+  margin: 0 0 26px;
+  color: var(--heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.content p {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+strong {
+  color: var(--heading);
+  font-weight: 500;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: var(--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 20px;
+}
+
+.content .date {
+  padding-top: 3px;
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+.content .subtitle {
+  margin-top: -4px;
+  font-size: 0.8rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: var(--accent);
+  background: rgba(94, 234, 212, 0.08);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.project-list {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.project {
+  padding: 22px;
+  margin: 0 -22px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.project:hover {
+  background: rgba(148, 163, 184, 0.04);
+  border-color: rgba(148, 163, 184, 0.1);
+}
+
+.project-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  margin-bottom: 8px;
+}
+
+.project-heading h3 {
+  margin: 0;
+}
+
+.project-status {
+  font-size: 0.65rem;
+  color: var(--accent);
+}
+
+.project p {
+  margin-bottom: 0;
+}
+
+.text-link {
+  color: var(--heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.contact-email {
+  display: inline-block;
+  color: var(--heading);
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  overflow-wrap: anywhere;
+}
+
+footer {
+  font-size: 0.7rem;
+  line-height: 1.8;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 12px 16px;
+  color: #0f172a;
+  background: var(--accent);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .portfolio {
+    padding: 56px 32px;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .name {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .introduction {
+    max-width: 420px;
+  }
+
+  .navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .nav-line {
+    display: none;
+  }
+
+  .content section {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 40px 24px;
+  }
+
+  .experience-entry {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .content .date {
+    margin-bottom: 4px;
+  }
+
+  .project {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .project:hover {
+    background: transparent;
+    border-color: transparent;
+  }
+}
