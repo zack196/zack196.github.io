@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+
 
 const sections = ["about", "experience", "projects", "contact"];
 
@@ -118,11 +120,33 @@ export default function App() {
           </div>
 
           <div className="social-links">
-            <a href="https://github.com/zack196">GitHub</a>
-            <a href="https://www.linkedin.com/in/zakaria-el-oirghi">
-              LinkedIn
+            <a
+              href="https://github.com/zack196"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              title="GitHub"
+            >
+              <FiGithub aria-hidden="true" />
             </a>
-            <a href="mailto:eloirghi4200@gmail.com">Email</a>
+                      
+            <a
+              href="https://www.linkedin.com/in/zakaria-el-oirghi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              title="LinkedIn"
+            >
+              <FiLinkedin aria-hidden="true" />
+            </a>
+                      
+            <a
+              href="mailto:eloirghi4200@gmail.com"
+              aria-label="Send me an email"
+              title="Email"
+            >
+              <FiMail aria-hidden="true" />
+            </a>
           </div>
         </header>
 

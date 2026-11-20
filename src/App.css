@@ -82,16 +82,32 @@
 
 .social-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  align-items: center;
+  gap: 16px;
   padding-top: 36px;
-  font-size: 0.85rem;
 }
 
-.social-links a:hover,
-.text-link:hover,
-.contact-email:hover {
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #a5b2c8;
+  border-radius: 8px;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+.social-links a:hover {
   color: var(--accent);
+  background-color: rgba(94, 234, 212, 0.08);
+}
+
+.social-links svg {
+  width: 23px;
+  height: 23px;
 }
 
 .content {
