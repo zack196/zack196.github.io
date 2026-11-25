@@ -317,3 +317,31 @@ footer {
     border-color: transparent;
   }
 }
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cv-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  border-radius: 6px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.cv-links a:hover {
+  background-color: rgba(94, 234, 212, 0.08);
+  border-color: var(--accent);
+}

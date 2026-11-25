@@ -102,6 +102,23 @@ export default function App() {
 
             <p className="location">Casablanca, Morocco · Nationwide mobility</p>
 
+            <div className="cv-links" aria-label="Download my CV">
+              <a
+                href={`${import.meta.env.BASE_URL}cv/Zakaria_El_Oirghi_CV_EN.pdf`}
+                download="Zakaria_El_Oirghi_CV_EN.pdf"
+              >
+                English CV <span aria-hidden="true">↓</span>
+              </a>
+              
+              <a
+                href={`${import.meta.env.BASE_URL}cv/Zakaria_El_Oirghi_CV_FR.pdf`}
+                download="Zakaria_El_Oirghi_CV_FR.pdf"
+                hrefLang="fr"
+              >
+                French CV <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+
             <nav className="navigation" aria-label="Main navigation">
               {sections.map((section) => (
                 <a
